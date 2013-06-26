@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Priority</th>
+      <th>Send Email?</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,6 +15,7 @@
     <% @alarms.each do |alarm| %>
       <tr>
         <td><%= alarm.priority %></td>
+        <td><%= alarm.priority.send_email? %></td>
         <td><%= link_to 'Show', alarm %></td>
         <td><%= link_to 'Edit', edit_alarm_path(alarm) %></td>
         <td><%= link_to 'Destroy', alarm, method: :delete, data: { confirm: 'Are you sure?' } %></td>

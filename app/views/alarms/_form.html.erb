@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :priority %><br>
-    <%= f.text_field :priority %>
+    <%= f.select :priority, Priority.select_options %>
   </div>
   <div class="actions">
     <%= f.submit %>
